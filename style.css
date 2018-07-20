@@ -1,0 +1,21 @@
+.output {
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+  .output:hover {
+    background-color: ivory;
+    border-color: gold;
+  }
+  .output-text {
+    display: block;
+  }
+  .output-name {
+    color: gray;
+    font-size: 0.7em;
+  }
+
+#clipboard {
+  position: absolute;
+  right: 100vw;
+  top: 0;
+}

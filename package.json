@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "browser-sync -f ."
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "eslint": "^5.1.0"
+  }
+}
