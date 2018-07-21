@@ -144,7 +144,7 @@
 
       const text = elOutput.querySelector('.output-text').textContent;
       copy(text);
-      showMessage('Copied to clipboard.');
+      showMessage('Copied to clipboard');
 
       elInput.focus();
       elInput.select();
@@ -152,6 +152,8 @@
 
     elInput.value = 'Hello World!';
     render(elInput.value);
+
+    showMessage('Click to copy');
   }
 
   start();
