@@ -4,10 +4,12 @@
   const elClipboard = document.querySelector('#clipboard');
   const elMessage = document.querySelector('#message');
   const charCodes = {
-    A: 65,
-    Z: 90,
-    a: 97,
-    z: 122,
+    A: 'A'.charCodeAt(0),
+    Z: 'Z'.charCodeAt(0),
+    a: 'a'.charCodeAt(0),
+    z: 'z'.charCodeAt(0),
+    0: '0'.charCodeAt(0),
+    9: '9'.charCodeAt(0),
   };
   const charDefs = [
     {
@@ -83,12 +85,14 @@
       .map((code) => {
         const isUpper = (charCodes.A <= code && code <= charCodes.Z);
         const isLower = (charCodes.a <= code && code <= charCodes.z);
-        const charIndex = code - (isUpper ? charCodes.A : (charCodes.a - 26));
+        const isNumber = (charCodes[0] <= code && code <= charCodes[9]);
 
         if (isUpper && def.upperCharacters) {
-          return def.upperCharacters[charIndex];
+          return def.upperCharacters[code - charCodes.A];
         } else if (isLower && def.lowerCharacters) {
-          return def.lowerCharacters[charIndex - 26];
+          return def.lowerCharacters[code - charCodes.a];
+        } else if (isNumber && def.numberCharacters) {
+          return def.numberCharacters[code - charCodes[0]];
         }
         return String.fromCharCode(code);
       })
