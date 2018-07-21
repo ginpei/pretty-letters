@@ -34,9 +34,10 @@
   padding: 0.2em 1em;
   position: fixed;
   right: 0;
-  transition: opacity 200ms;
+  transition: opacity 200ms, transform 200ms;
   width: 50%;
 }
   #message[data-visible="true"] {
     opacity: 1;
+    transform: translateY(-0.2em);
   }
