@@ -1,3 +1,8 @@
+#input-block {
+  position: sticky;
+  top: 1px;
+}
+
 .output {
   border: 1px solid transparent;
   cursor: pointer;
