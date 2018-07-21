@@ -70,6 +70,12 @@
       offset: 0xde70,
       prefix: 0xd835,
     },
+    {
+      name: 'Superscript',
+      upperCharacters: 'ᴬᴮ�ᴰᴱ�ᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾ�ᴿ�ᵀᵁⱽᵂ���',
+      lowerCharacters: 'ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖ�ʳˢᵗᵘᵛʷˣʸᶻ',
+      numberCharacters: '⁰¹²³⁴⁵⁶⁷⁸⁹',
+    }
   ];
 
   function renderText(inputCodes, def) {
@@ -82,8 +88,15 @@
           return String.fromCharCode(code);
         }
 
-        const prefix = String.fromCharCode(def.prefix);
         const charIndex = code - (isUpper ? charCodes.A : (charCodes.a - 26));
+
+        if (isUpper && def.upperCharacters) {
+          return def.upperCharacters[charIndex];
+        } else if (isLower && def.lowerCharacters) {
+          return def.lowerCharacters[charIndex - 26];
+        }
+
+        const prefix = String.fromCharCode(def.prefix);
         return prefix + String.fromCharCode(def.offset + charIndex);
       })
       .join('');
