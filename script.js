@@ -2,6 +2,7 @@
   const elInput = document.querySelector('#input');
   const elOutput = document.querySelector('#output');
   const elClipboard = document.querySelector('#clipboard');
+  const elMessage = document.querySelector('#message');
   const charCodes = {
     A: 65,
     Z: 90,
@@ -119,6 +120,17 @@
     document.execCommand('copy');
   }
 
+  let tmShowMessage = 0;
+  function showMessage (text) {
+    elMessage.textContent = text;
+
+    clearTimeout(tmShowMessage);
+    elMessage.setAttribute('data-visible', 'true');
+    tmShowMessage = setTimeout(() => {
+      elMessage.setAttribute('data-visible', 'false');
+    }, 3000);
+  }
+
   function start () {
     elInput.addEventListener('input', (event) => {
       render(elInput.value);
@@ -132,7 +144,7 @@
 
       const text = elOutput.querySelector('.output-text').textContent;
       copy(text);
-      alert('Copied to clipboard.');
+      showMessage('Copied to clipboard.');
 
       elInput.focus();
       elInput.select();
