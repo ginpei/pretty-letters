@@ -3,8 +3,8 @@
   cursor: pointer;
 }
   .output:hover {
-    background-color: ivory;
-    border-color: gold;
+    background-color: aliceblue;
+    border-color: cadetblue;
   }
   .output-text {
     display: block;
