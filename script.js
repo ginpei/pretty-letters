@@ -8,55 +8,66 @@
     a: 97,
     z: 122,
   };
-  const prefix = String.fromCharCode(0xd835);
   const charDefs = [
     {
       name: 'Mathematical Bold',
       offset: 0xdc00,
+      prefix: 0xd835,
     },
     {
       name: 'Mathematical Italic',
       offset: 0xdc34,
+      prefix: 0xd835,
     },
     {
       name: 'Mathematical Bold Italic',
       offset: 0xdc68,
+      prefix: 0xd835,
     },
     {
       name: 'Mathematical Script',
       offset: 0xdc9c,
+      prefix: 0xd835,
     },
     {
       name: 'Mathematical Bold Script',
       offset: 0xdcd0,
+      prefix: 0xd835,
     },
     {
       name: 'Mathematical Double-struck',
       offset: 0xdd38,
+      prefix: 0xd835,
     },
     {
       name: 'Mathematical Bold Fraktur',
       offset: 0xdd6c,
+      prefix: 0xd835,
     },
     {
       name: 'Mathematical Sans-serif',
       offset: 0xdda0,
+      prefix: 0xd835,
     },
     {
       name: 'Mathematical Sans-serif Bold',
       offset: 0xddd4,
+      prefix: 0xd835,
     },
     {
       name: 'Mathematical Sans-serif Italic',
       offset: 0xde08,
+      prefix: 0xd835,
     },
     {
       name: 'Mathematical Sans-serif Bold Italic',
       offset: 0xde3c,
+      prefix: 0xd835,
     },
     {
       name: 'Mathematical Monospace',
       offset: 0xde70,
+      prefix: 0xd835,
     },
   ];
 
@@ -70,6 +81,7 @@
           return String.fromCharCode(code);
         }
 
+        const prefix = String.fromCharCode(def.prefix);
         const charIndex = code - (isUpper ? charCodes.A : (charCodes.a - 26));
         return prefix + String.fromCharCode(def.offset + charIndex);
       })
