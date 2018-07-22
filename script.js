@@ -12,6 +12,7 @@
     9: '9'.charCodeAt(0),
   };
   const charDefs = [
+    // ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
     {
       name: 'Mathematical Bold',
       upperCharacters: Array.from('𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙'),
@@ -20,7 +21,7 @@
     {
       name: 'Mathematical Italic',
       upperCharacters: Array.from('𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍'),
-      lowerCharacters: Array.from('𝑎𝑏𝑐𝑑𝑒𝑓𝑔�𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧'),
+      lowerCharacters: Array.from('𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧'),
     },
     {
       name: 'Mathematical Bold Italic',
@@ -29,8 +30,8 @@
     },
     {
       name: 'Mathematical Script',
-      upperCharacters: Array.from('𝒜�𝒞𝒟��𝒢��𝒥𝒦��𝒩𝒪𝒫𝒬�𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵'),
-      lowerCharacters: Array.from('𝒶𝒷𝒸𝒹�𝒻�𝒽𝒾𝒿𝓀𝓁𝓂𝓃�𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏'),
+      upperCharacters: Array.from('𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵'),
+      lowerCharacters: Array.from('𝒶𝒷𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃ℴ𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏'),
     },
     {
       name: 'Mathematical Bold Script',
@@ -39,7 +40,7 @@
     },
     {
       name: 'Mathematical Double-struck',
-      upperCharacters: Array.from('𝔸𝔹�𝔻𝔼𝔽𝔾�𝕀𝕁𝕂𝕃𝕄�𝕆���𝕊𝕋𝕌𝕍𝕎𝕏𝕐�'),
+      upperCharacters: Array.from('𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ'),
       lowerCharacters: Array.from('𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫'),
     },
     {
