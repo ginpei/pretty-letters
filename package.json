@@ -4,7 +4,7 @@
     "start": "browser-sync -f ."
   },
   "devDependencies": {
-    "browser-sync": "^2.24.5",
+    "browser-sync": "^2.26.7",
     "eslint": "^5.1.0"
   }
 }
