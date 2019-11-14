@@ -78,7 +78,7 @@
       upperCharacters: 'ᴬᴮ�ᴰᴱ�ᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾ�ᴿ�ᵀᵁⱽᵂ���',
       lowerCharacters: 'ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖ�ʳˢᵗᵘᵛʷˣʸᶻ',
       numberCharacters: '⁰¹²³⁴⁵⁶⁷⁸⁹',
-    }
+    },
   ];
 
   function renderText(inputCodes, def) {
